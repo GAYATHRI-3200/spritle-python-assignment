@@ -5,6 +5,11 @@
 
 #Description:
 
+Home Page: Basic Prfile Details
+Register,Login and Logout Page
+Calculation Page 
+contact page: this contact form sends the quries to admin email and confirmation mail sends back to user mail.
+
 Write calculations using functions and get the results. Let's have a look at some examples:
 
 seven(times(five())) # must return 35
