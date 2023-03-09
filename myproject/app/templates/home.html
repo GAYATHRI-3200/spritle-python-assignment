@@ -1,0 +1,191 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spritle Assignment</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <style type="text/css">
+      @import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+      * {
+        font-family: "Titillium Web", sans-serif;
+      }
+      .navbar .navbar-brand {
+        font-size: 30px;
+      }
+      .navbar .nav-item {
+        padding: 10px 20px;
+      }
+      .navbar .nav-link {
+        font-size: 20px;
+        margin-left: 10px;
+      }
+      .fa-bars {
+        color:#007bff;
+        font-size: 30px;
+      }
+      .custom-button {
+      margin:auto;
+      width: 130px;
+      height: 65px;
+      color: white;
+      background-color: #d0b200;
+      border-width: 0;
+      border-radius: 8px;
+      margin-right: 10px;
+      background-image: linear-gradient(#0079d0, #0060a5);
+}
+        body,
+        html {
+        overflow: hidden;
+        background: #f9fbfe !important;
+        }
+        div{
+        color:black;           
+
+        }
+        h1{
+        color:#008080;
+        font-family:Rockwell;
+        font-size:40px;
+        font-weight:bold;
+        }
+
+        .quote {
+        background-color: #87b8f4dd;
+        font-size: 20px;
+        font-weight: 100;
+        text-align: center;
+        padding: 2em;
+        }
+
+        h3 {
+        font-size: 25px;
+        font-weight: 600;
+        }
+        span {
+        background-color: #e9eef0;
+        font-weight: 100;
+        font-size: 30px;
+        opacity: 0.7;
+        padding: 10px;
+        transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+        }
+        .heading{
+        background-color: #f9fbfe;
+        }
+
+        .heading-img{
+        margin: 20px;
+        padding: 20px;
+        width: 370px;
+        height: 250px;
+        }
+
+        .caption {
+        font-family: "Roboto";
+        font-weight: 700;
+        font-size: 28px;
+        color: #183b56;
+        }
+
+        .description {
+        color: #000;
+        font-family: "Roboto";
+        font-size: 18px;
+        font-weight: 400;
+        }
+
+        .copy-right-sec{
+        padding: 1.8rem;
+        background: hwb(0 95% 5%);
+        color: rgb(33, 4, 4);
+        text-align: center;
+        }
+        .copy-right-sec a{
+        color: #2fbafb;
+        font-weight:bold;
+        }
+        a{
+        text-decoration:none;
+        }
+     
+    </style>
+</head>
+<body>
+<!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">Spritle</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto w-100 justify-content-end">             
+
+            <li class="nav-item">
+                <a class="nav-link"> Hello, {{request.user}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+            </li>
+            <button class="custom-button" onclick="window.location.href='{% url 'main' %}'; " type="submit">Start</button>
+        </ul>
+    </div>
+
+    </nav>
+<!--div-info-->
+    <div class="quote">
+        Python Developer Assignment<br>
+      <br>
+      <span><a href="#">Start</a></span>
+      <span><a href="https://www.linkedin.com/in/gayathri-s-34a994262/">Admin</a></span>
+      <br>
+    </div>
+<!--profile-->
+    <div class="heading pt-5 pb-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-12 col-md-6">
+                  <div class="text-center">
+                      <img src="https://cdn-icons-png.flaticon.com/512/6522/6522516.png" class="heading-img" />
+                  </div>
+              </div>
+              <div class="col-12 col-md-6">
+                  <h1 class="caption">
+                      Gayathri S
+                  </h1>
+                  <p class="description">
+                    Experienced full-stack developer with expertise in Python, and Django. Proven track record of delivering high-quality website development projects. Strong understanding of the software industry and commitment to staying current with the latest technologies. Strong communication skills and experience in managing client relationships and handling multiple projects.Seeking a challenging opportunity to utilize my skills and contribute to the development of innovative software solutions.</p>
+                  <a href="https://www.linkedin.com/in/gayathri-s-34a994262/"><button class="custom-button" >Know More</button></a>
+              </div>
+          </div>
+      </div>
+    </div>
+<!--footer-->
+    <section id="copy-right">
+        <div class="copy-right-sec"> © Copyright Gayathri 2023:
+        Powerd By <a href="https://www.linkedin.com/in/gayathri-s-34a994262/">Gayathri</a> 
+        </div>
+    </section>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    </body>
+    </html>
