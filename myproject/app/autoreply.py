@@ -10,7 +10,7 @@ from email import encoders
 def autoreply(toaddr):
 	"""SEnd reply to contact submission."""
 
-	fromaddr = "dyslexiaprediction@gmail.com"
+	fromaddr = "XXX"
 	msg = MIMEMultipart()
 
 	msg['From'] = fromaddr
